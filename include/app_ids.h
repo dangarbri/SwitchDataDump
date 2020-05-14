@@ -1,0 +1,3 @@
+#pragma once
+
+#define ANIMAL_CROSSING_APP_ID 0x01006F8002326000

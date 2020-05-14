@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SwitchBew/v16
+/build
+/Debug
+/SwitchBew.nro
+/SwitchBew.nacp
+/SwitchBew.elf
+/SwitchBew.vcxproj.user
+/SwitchBew.vcxproj.filters
