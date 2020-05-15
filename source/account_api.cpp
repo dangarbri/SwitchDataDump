@@ -1,4 +1,5 @@
 #include "account_api.h"
+#include "error_string.h"
 #include <cstdio>
 #include <new>
 
@@ -9,7 +10,7 @@ AccountAPI::AccountAPI()
 	Result rc = accountInitialize(AccountServiceType_System);
     if (R_FAILED(rc))
     {
-        printf("accountInitialize() failed: 0x%X", rc);
+        ERROR_RESULT_PRINT(rc);
     }
     else
     {
@@ -28,7 +29,7 @@ s32 AccountAPI::GetUserCount()
     Result rc = accountGetUserCount(&user_count);
     if (R_FAILED(rc))
     {
-        printf("failed to get number of users. code 0x%X\n", rc);
+        ERROR_RESULT_PRINT(rc);
     }
 
     return user_count;
@@ -55,7 +56,7 @@ void AccountAPI::PrintAllUserInfo()
             rc = accountListAllUsers(uid_buffer, user_count, &users_returned);
             if (R_FAILED(rc))
             {
-                printf("Failed to load users. code 0x%X\n", rc);
+                ERROR_RESULT_PRINT(rc);
             }
             else
             {
