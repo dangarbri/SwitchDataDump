@@ -67,7 +67,7 @@
     <NMakeOutput>SwitchBew.exe</NMakeOutput>
     <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>make clean all</NMakeReBuildCommandLine>
-    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>ENABLE_ERROR_CODE_PRINTS;WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>C:\devkitPro\devkitA64\include;C:\devkitPro\libnx\include;$(ProjectDir)\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -99,11 +99,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\account_api.cpp" />
+    <ClCompile Include="source\error_string.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\account_api.h" />
     <ClInclude Include="include\app_ids.h" />
+    <ClInclude Include="include\error_string.h" />
     <ClInclude Include="include\intellisense.h" />
   </ItemGroup>
   <ItemGroup>
