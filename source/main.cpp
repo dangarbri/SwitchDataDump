@@ -23,10 +23,9 @@ int main(int argc, char* argv[])
 
     AccountAPI account_api;
 
-    consoleInit(NULL);
-
     cout << "This system has " << account_api.GetUserCount() << " users." << endl;
     account_api.PrintAllUserInfo();
+    account_api.PrintApplicationInfo();
 
     // Main loop
     while (appletMainLoop())

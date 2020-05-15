@@ -419,8 +419,8 @@ static map<int, string> s_error_code_strings = {
     {0x1BC69, "Empty settings item key"},
     {0x1E269, "Setting group name is too long(64 character limit  ? )" },
     {0x1E469, "Setting name is too long(64 character limit  ? )" },
-    {0x20A69, "Setting group name ends with '.' or contains invalid characters(allowed: [a - z0 - 9_\ - .] )"},
-    {0x20C69, "Setting name ends with '.' or contains invalid characters(allowed: [a - z0 - 9_\ - .] )"},
+    {0x20A69, "Setting group name ends with '.' or contains invalid characters(allowed: [a - z0 - 9_\\ - .])"},
+    {0x20C69, "Setting name ends with '.' or contains invalid characters(allowed: [a - z0 - 9_\\ - .] )"},
     {0x4DA69, "Null language code buffer"},
     {0x4EE69, "Null network settings buffer"},
     {0x4F069, "Null network settings output count buffer"},
@@ -801,7 +801,7 @@ void error_code_print(Result rc, const char* file, int line)
     }
     else
     {
-        printf("Message: %s", it->second);
+        printf("Message: %s\n", it->second.c_str());
     }
 #endif
 }

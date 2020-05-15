@@ -8,7 +8,9 @@ public:
 	bool IsInitialized();
 	s32 GetUserCount();
 	void PrintAllUserInfo();
+	void PrintApplicationInfo();
 	~AccountAPI();
 private:
 	bool _is_initialized = false;
+	void PrintUserProfile(AccountUid &uid);
 };
